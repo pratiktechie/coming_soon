@@ -1,18 +1,15 @@
-// Credit: @LukyVj
-// https://twitter.com/LukyVj
-// https://lucasbonomi.com
-
-
-
-
-
-
-if (typeof window.CSS.registerProperty === 'function') {
-  console.log('CSS.registerProperty supported 🎉')
-  document.body.style.setProperty('--supported', 1);
-  document.body.classList.add('registerProperty-supported')
-} else {
-  console.log('CSS.registerProperty not supported ❌')
-  document.body.style.setProperty('--not-supported', 1);
-  document.body.classList.add('registerProperty-not-supported')
-}
+(function($){
+  // variables
+  elementWidth = $('ul').width(),
+  containerWidth = $('nav').width(),
+  difference = elementWidth-containerWidth,
+  finalWidth = difference * 1.5,
+  element = $('ul');
+  
+  // active on click
+  $('li').on('click', function(){
+    $('li').removeClass('active');
+    $(this).addClass('active');
+  });
+  
+})(jQuery);
